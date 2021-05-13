@@ -1,0 +1,35 @@
+name: Deploy Staging
+
+on:
+  push:
+    branches: [staging]
+  pull_request:
+    branches: [staging]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2.1.5
+        with:
+          node-version: '12'
+      - uses: actions/cache@v2
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
+
+      - name: Install dependencies
+        run: |
+          yarn install
+      - name: Build application
+        run: |
+          yarn build
+          echo "staging.metricsubs.cn" >> package/dist/CNAME
+      - name: Deploy pages
+        uses: crazy-max/ghaction-github-pages@v2.3.0
+        with:
+          build_dir: public
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
