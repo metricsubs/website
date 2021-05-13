@@ -26,7 +26,7 @@ jobs:
       - name: Build application
         run: |
           yarn build
-          echo "staging.metricsubs.cn" >> package/dist/CNAME
+          echo "staging.metricsubs.cn" >> public/CNAME
       - name: Deploy pages
         uses: crazy-max/ghaction-github-pages@v2.3.0
         with:
