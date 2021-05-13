@@ -4,6 +4,7 @@
   "private": true,
   "description": "MetricSubs website powered by Gatsby",
   "author": "Dizy",
+  "license": "GPL-3.0",
   "keywords": [
     "MetricSubs"
   ],
