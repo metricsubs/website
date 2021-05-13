@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'MetricSubs',
+    siteUrl: 'https://metricsubs.cn',
   },
   plugins: [
     'gatsby-plugin-gatsby-cloud',
