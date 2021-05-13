@@ -1,14 +1,13 @@
 {
-  "name": "metric-subs",
+  "name": "website",
   "version": "1.0.0",
   "private": true,
-  "description": "MetricSubs",
+  "description": "MetricSubs website powered by Gatsby",
   "author": "Dizy",
   "keywords": [
-    "gatsby"
+    "MetricSubs"
   ],
   "scripts": {
-    "develop": "gatsby develop",
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
