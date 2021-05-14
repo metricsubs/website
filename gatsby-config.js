@@ -4,6 +4,7 @@ module.exports = {
     siteUrl: 'https://metricsubs.cn',
   },
   plugins: [
+    'gatsby-plugin-postcss',
     'gatsby-plugin-gatsby-cloud',
     'gatsby-plugin-sitemap',
     'gatsby-plugin-mdx',
